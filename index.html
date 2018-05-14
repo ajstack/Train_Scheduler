@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <title>Train Scheduler</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="jumbotron bg-dark text-warning">
+            <h1 class="display-4">Train Scheduler</h1>
+            <hr class="my-4">
+            <p class="lead">All roads lead to Gotham.</p>
+        </div>
+
+        <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
+            <div class="card-header text-warning">
+                Current Train Schedule
+            </div>
+            <table class="table text-warning">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gotham Express</td>
+                        <td>Downtown Gotham</td>
+                        <td>14</td>
+                        <td>2:58</td>
+                        <td>7</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
+            <div class="card-header text-warning">
+                Add Train
+            </div>
+            <div class="card-body text-warning">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Train Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Destination</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">First Train Time (HH:mm)</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Frequency (min)</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="button" class="btn btn-warning">Submit</button>
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
