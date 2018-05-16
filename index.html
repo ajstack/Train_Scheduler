@@ -12,84 +12,78 @@
 
 <body>
     <div id="container">
-        <div class="jumbotron bg-dark text-warning">
-            <h1 class="display-4">Train Scheduler</h1>
-            <hr class="my-4">
-            <p class="lead">All roads lead to Gotham.</p>
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-11">
+                <div class="jumbotron bg-dark text-warning">
+                    <h1 class="display-4">Train Scheduler</h1>
+                    <hr class="my-4">
+                    <p class="lead">All roads lead to Gotham.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
-            <div class="card-header text-warning">
-                Current Train Schedule
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-11">
+                <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
+                    <div class="card-header text-warning">
+                        Current Train Schedule
+                    </div>
+                    <table class="table text-warning">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <table class="table text-warning">
-                <thead>
-                    <tr>
-                        <th scope="col">Train Name</th>
-                        <th scope="col">Destination</th>
-                        <th scope="col">Frequency (min)</th>
-                        <th scope="col">Next Arrival</th>
-                        <th scope="col">Minutes Away</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Gotham Express</td>
-                        <td>Downtown Gotham</td>
-                        <td>14</td>
-                        <td>2:58</td>
-                        <td>7</td>
-                    </tr>
-
-                </tbody>
-            </table>
         </div>
 
-        <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
-            <div class="card-header text-warning">
-                Add Train
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-11">
+                <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
+                    <div class="card-header text-warning">
+                        Add Train
+                    </div>
+                    <div class="card-body text-warning">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Train Name</label>
+                                <input type="email" class="form-control" id="trainName" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Destination</label>
+                                <input type="email" class="form-control" id="destination" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">First Train Time (HH:mm)</label>
+                                <input type="email" class="form-control" id="firstTime" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Frequency (min</label>
+                                <input type="email" class="form-control" id="frequency" aria-describedby="emailHelp">
+                            </div>
+                            <button type="button" id="submit" class="btn btn-warning">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="card-body text-warning">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Train Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Destination</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">First Train Time (HH:mm)</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Frequency (min)</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <button type="button" class="btn btn-warning">Submit</button>
-                </form>
-
-            </div>
-
         </div>
-
-
-
-
-
     </div>
 
-
-
-
-
-
-
-
-
+    <!--Moment.js-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!--jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+    <!--Javascript-->
     <script src="app.js"></script>
 </body>
 
