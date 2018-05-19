@@ -66,7 +66,6 @@ database.ref().on("value", function(snapshot){
 
     console.log(childSnapshot.val());
     console.log(childSnapshot.val().trainName);
-    $("tbody").empty();
     var row = $("<tr>");
       row.append(`<td>${childSnapshot.val().trainName}</td>`);
       row.append(`<td>${childSnapshot.val().destination}</td>`);
