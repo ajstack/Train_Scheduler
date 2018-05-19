@@ -63,9 +63,10 @@ database.ref().on("value", function(snapshot){
   console.log(snapshot.val());
 
   database.ref().on("child_added", function(childSnapshot){
+
     console.log(childSnapshot.val());
     console.log(childSnapshot.val().trainName);
-
+    $("tbody").empty();
     var row = $("<tr>");
       row.append(`<td>${childSnapshot.val().trainName}</td>`);
       row.append(`<td>${childSnapshot.val().destination}</td>`);
@@ -81,7 +82,8 @@ database.ref().on("value", function(snapshot){
 
 
 
-//figure why it displays a million times on the second submit
+//figure why it displays twice
 //prevent non-numeric characters in time inputs
 //comment code
 //clear out inputs after submit
+//add to portfolio
