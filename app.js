@@ -1,3 +1,4 @@
+//firebase
 var config = {
   apiKey: "AIzaSyBs646z5wUS8Pq_vg5098TB6ch9jEV2wH0",
   authDomain: "train-scheduler-b9898.firebaseapp.com",
@@ -23,12 +24,13 @@ var minutesAway = 0;
 $("#submit").on("click", function (event) {
   event.preventDefault();
 
-  
+  //pulling from input
   trainName = $("#trainName").val().trim();
   destination = $("#destination").val().trim();
   firstTime = $("#firstTime").val().trim();
   frequency = $("#frequency").val().trim();
 
+  //calculating next arrival
   var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
   console.log(firstTimeConverted);
 
@@ -49,6 +51,7 @@ $("#submit").on("click", function (event) {
 
   nextArrival = moment(nextArrival).format("hh:mm").toString();
 
+  //pushing to firebase
   database.ref().push({
     trainName: trainName,
     destination: destination,
@@ -59,30 +62,25 @@ $("#submit").on("click", function (event) {
   });
 });
 
-database.ref().on("value", function(snapshot){
-  console.log(snapshot.val());
+//pulling from firebase to display to HTML
+  database.ref().on("child_added", function(snapshot){
 
-  database.ref().on("child_added", function(childSnapshot){
+      console.log(snapshot.val());
 
-    console.log(childSnapshot.val());
-    console.log(childSnapshot.val().trainName);
     var row = $("<tr>");
-      row.append(`<td>${childSnapshot.val().trainName}</td>`);
-      row.append(`<td>${childSnapshot.val().destination}</td>`);
-      row.append(`<td>${childSnapshot.val().frequency}</td>`);
-      row.append(`<td>${childSnapshot.val().nextArrival}</td>`);
-      row.append(`<td>${childSnapshot.val().minutesAway}</td>`);
+      row.append(`<td>${snapshot.val().trainName}</td>`);
+      row.append(`<td>${snapshot.val().destination}</td>`);
+      row.append(`<td>${snapshot.val().frequency}</td>`);
+      row.append(`<td>${snapshot.val().nextArrival}</td>`);
+      row.append(`<td>${snapshot.val().minutesAway}</td>`);
     $("tbody").append(row);
   });
 
-});
 
 
 
 
 
-//figure why it displays twice
+
 //prevent non-numeric characters in time inputs
-//comment code
-//clear out inputs after submit
-//add to portfolio
+//clear out inputs after submit {this fucks up everything for some frickin' reason so I gave up}
