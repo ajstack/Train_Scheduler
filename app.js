@@ -75,12 +75,3 @@ $("#submit").on("click", function (event) {
       row.append(`<td>${snapshot.val().minutesAway}</td>`);
     $("tbody").append(row);
   });
-
-
-
-
-
-
-
-//prevent non-numeric characters in time inputs
-//clear out inputs after submit {this fucks up everything for some frickin' reason so I gave up}
