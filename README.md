@@ -4,3 +4,5 @@ This project enables you to create a train schedule. By adding a train name, des
 calculate when the next train will arrive. It will also save this information in case you click away from the page or just wish to save it.
 
 This project is maintained by Alicia Stack 
+
+https://ajstack.github.io/Train_Scheduler/
